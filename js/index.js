@@ -2819,7 +2819,6 @@ const wordlist = [
 "techs",
 "teddy",
 "teeny",
-"telex",
 "telly",
 "tempo",
 "tempt",
@@ -3243,7 +3242,6 @@ function GenerateSoluton() {
     solutionWord = solutionWord.toUpperCase();
 }
 
-// Check results of a word
 function validate(word) {
     word = word.toUpperCase();
     solutionWord = solutionWord.toUpperCase();
@@ -3266,7 +3264,6 @@ function validate(word) {
     console.log(word,result,solutionWord);
 }
 
-// update game UI
 function refreshGame() {
     if (results[results.length - 1] == "+".repeat(lengthOfWord)) {
         resultsBox.innerHTML = `<h1> You won! </h1> <br> <button onClick="window.location.reload();">Replay</button>`
@@ -3289,7 +3286,6 @@ function refreshGame() {
     }
 }
 
-// Initialize game
 function initializeGame() {
     GenerateSoluton();
     for (let i = 0; i < lengthOfWord*guesses; i++) { // 6 attempts, 5 letters each
@@ -3306,7 +3302,6 @@ function initializeGame() {
     }
 }
 
-// Event listener for the guess button
 guessButton.addEventListener('click', function() {
     let guess = guessInput.value.toLowerCase();
     if (guess.length === lengthOfWord) {
