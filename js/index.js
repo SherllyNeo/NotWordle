@@ -3271,8 +3271,10 @@ function refreshGame() {
     if (results[results.length - 1] == "+".repeat(lengthOfWord)) {
         resultsBox.innerHTML = `<h1> You won! </h1> <br> <button onClick="window.location.reload();">Replay</button>`
     }
-    if (inputs.length == guesses) {
-        resultsBox.innerHTML = `<h1> You lost :( The word was ${solutionWord} </h1> <br> <button onClick="window.location.reload();">Replay</button>`
+    else {
+        if (inputs.length == guesses) {
+            resultsBox.innerHTML = `<h1> You lost :( The word was ${solutionWord} </h1> <br> <button onClick="window.location.reload();">Replay</button>`
+        }
     }
   const cells = gameBoard.getElementsByClassName('cell');
     for (let i = 0; i < lengthOfWord*guesses; i++) { // 6 attempts, 5 letters each
