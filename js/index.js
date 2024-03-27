@@ -3,7 +3,7 @@ const guessInput = document.getElementById('guessInput');
 const guessButton = document.getElementById('guessButton');
 const resultsBox = document.getElementById('results');
 const lengthOfWord = 5;
-const guesses = 6;
+const guesses = 5;
 const wordlist = [
 "aback",
 "abaft",
